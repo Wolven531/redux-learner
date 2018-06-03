@@ -1,13 +1,18 @@
-import React, { Component } from "react";
-import HelloWorld from "./HelloWorld";
+import React, { Component, Fragment } from 'react'
+
+import { ButtonGroup } from './ButtonGroup'
+import { HelloWorld } from './HelloWorld'
+import { TECHNOLOGIES, store } from './store'
 
 class App extends Component {
-  state = {
-    tech: "React"
-  };
-  render() {
-    return <HelloWorld tech={this.state.tech} />;
-  }
+	render() {
+		return true &&
+			<Fragment>
+				<React.Fragment />
+				<HelloWorld tech={store.getState().tech} />
+				<ButtonGroup datasetName="tech" displayItems={TECHNOLOGIES} />
+			</Fragment>
+	}
 }
 
-export default App;
+export { App }
