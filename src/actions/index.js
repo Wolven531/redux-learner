@@ -1,11 +1,16 @@
-const ACTIONS = {
-	SET_TECHNOLOGY: 'set_technology',
-	REDUX_INIT: '@@redux'
-}
+import {
+	SET_ACTIVE_USER_ID,
+	SET_TECHNOLOGY
+} from '../constants/action-types'
 
-const setTechnology = technology => ({
-	type: ACTIONS.SET_TECHNOLOGY,
-	tech: technology
+const setActiveUserId = id => ({
+	type: SET_ACTIVE_USER_ID,
+	payload: id
 })
 
-export { ACTIONS, setTechnology }
+const setTechnology = technology => ({
+	type: SET_TECHNOLOGY,
+	payload: technology
+})
+
+export { setActiveUserId, setTechnology }

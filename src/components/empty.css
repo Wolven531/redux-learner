@@ -1,0 +1,52 @@
+.empty {
+	display: grid;
+	grid-template-columns: 10% auto 10%;
+	justify-items: center;
+}
+
+.empty .name,
+.empty img,
+.empty h3,
+.empty .status,
+.empty .start-btn,
+.empty .info {
+	grid-column: 2;
+}
+
+.empty img {
+	border-radius: 50%;
+}
+
+.empty .name {
+	color: #fff;
+	min-width: 250px;
+	text-align: center;
+	width: 50%;
+}
+
+.empty .status {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+	border-top: 1px solid rgba(255, 255, 255, 0.7);
+	color: rgba(255, 255, 255, 0.9);
+	padding: 1em .5em;
+	text-indent: 1em;
+	word-break: break-all;
+}
+
+.empty .info,
+.empty .start-btn {
+	margin-top: 2em;
+}
+
+.empty .start-btn {
+	border-radius: 2em;
+	font-size: 1.2em;
+	font-weight: bold;
+	outline: 0;
+	padding: 1em;
+}
+
+.empty .start-btn:hover {
+	background: rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+}

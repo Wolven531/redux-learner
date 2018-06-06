@@ -1,28 +1,13 @@
-import { ACTIONS } from '../actions'
+import { combineReducers } from 'redux'
 
-const mainReducer = (state, action) => {
-	const type = action.type
+import { mainReducer as activeUserId } from './activeUserId'
+import { mainReducer as contacts } from './contact'
+import { mainReducer as user } from './user'
 
-	if (type.startsWith(ACTIONS.REDUX_INIT)) {
-		return state
-	}
-
-	console.info(`[mainReducer] action.type="${type}"`)
-
-	switch (type) {
-	case ACTIONS.SET_TECHNOLOGY:
-		const newTech = action.tech
-		console.info(`[mainReducer] action.tech="${newTech}"`)
-		return {
-			...state,
-			tech: newTech
-		}
-	default:
-		console.warn(`[mainReducer] Could not match action type "${type}"`)
-		break
-	}
-
-	return state
-}
+const mainReducer = combineReducers({
+	activeUserId,
+	contacts,
+	user
+})
 
 export { mainReducer }

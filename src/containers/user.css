@@ -1,0 +1,61 @@
+.user {
+	display: grid;
+	padding: 1em 0 1em 0;
+}
+
+.user:first-child {
+	margin-top: 0;
+}
+
+.user:hover {
+	background: rgba(0, 0, 0, .2);
+	cursor: pointer;
+}
+
+.user p {
+	margin: 0;
+	padding: 0;
+}
+
+.user .profile-picture {
+	border-radius: 50%;
+	max-width: 4em;
+	margin: .5em auto;
+}
+
+.user .name {
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: bolder;
+}
+
+.user .status {
+	display: none;
+}
+
+@media (min-width: 600px) {
+	.user {
+		grid-template-columns: 1fr 2fr;
+		min-height: 5em;
+	}
+	
+	.user .profile-picture {
+		grid-column: 1;
+		grid-row: 1 / 2;
+		margin: .5em 0 .5em .5em;
+	}
+	
+	.user .details {
+		display: grid;
+		grid-column: 2;
+		grid-row: 1 / 2;
+		grid-template-rows: 2em auto;
+	}
+	
+	.user .status {
+		display: block;
+		font-size: .75em;
+		padding-right: 1em;
+		text-indent: 1em;
+	}
+}

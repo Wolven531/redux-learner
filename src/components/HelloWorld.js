@@ -10,7 +10,7 @@ const HelloWorld = ({ tech }) => {
 }
 
 HelloWorld.propTypes = {
-	tech: PropTypes.string
+	tech: PropTypes.string.isRequired
 }
 
 export { HelloWorld }

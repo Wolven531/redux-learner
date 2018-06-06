@@ -32,8 +32,8 @@ const ButtonGroup = ({ displayItems, datasetName }) => {
 }
 
 ButtonGroup.propTypes = {
-	datasetName: PropTypes.string,
-	displayItems: PropTypes.arrayOf(PropTypes.string)
+	datasetName: PropTypes.string.isRequired,
+	displayItems: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 export { ButtonGroup }

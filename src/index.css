@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700i");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700");
+
+body {
+	font-family: "Nunito Sans";
+}
+
+/* @import url("https://fonts.googleapis.com/css?family=Lato:400,700i");
 body {
 	margin: 0;
 	padding: 0;
@@ -25,7 +31,6 @@ body {
 	content: "";
 	top: -600%;
 	height: 600%;
-	/* 6X of .hello-world */
 	width: 100%;
 	background: url("images/hello.svg") 50% 50% / contain no-repeat;
 }
@@ -44,4 +49,4 @@ body {
 .hello-world__tech {
 	font-weight: 700;
 	font-style: italic;
-}
+} */
